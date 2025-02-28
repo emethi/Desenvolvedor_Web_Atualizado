@@ -315,15 +315,14 @@ nav {
     height: 150px; /* Reduz a altura da imagem inferior */
   }
 }
-
 /* SEÇÃO SOBRE */
 .about-container {
- display: flex;
- align-items: flex-start; /* Alinha os itens ao topo */
- justify-content: space-between; /* Espaço entre o texto e a assinatura */
- padding: 1px;
- max-width: 900px; /* Aumentei a largura para acomodar os dois lados */
- margin: 0px auto; /* Adiciona 50px de margem superior e inferior, mantendo a centralização horizontal */
+  display: flex;
+  align-items: flex-start; /* Alinha os itens ao topo */
+  justify-content: space-between; /* Espaço entre o texto e a assinatura */
+  padding: 1px;
+  max-width: 900px; /* Aumentei a largura para acomodar os dois lados */
+  margin: 0 auto; /* Adiciona 50px de margem superior e inferior, mantendo a centralização horizontal */
 }
 
 /* Estilo para o texto sobre mim (lado esquerdo) */
@@ -349,6 +348,7 @@ nav {
   font-family: 'Fira Code', monospace; 
   line-height: 1.8;
   margin-bottom: 10px;
+  text-align: justify; /* Justifica o texto */
 }
 
 .about-text p:first-of-type {
@@ -371,6 +371,8 @@ nav {
   height: 150px;
   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); /* Forma irregular */
   border: 2px solid #fff;
+  border-radius: 10px; /* Arredonda as bordas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efeito de sombra suave */
   margin-bottom: 220px; /* Espaço entre a foto e a assinatura */
 }
 
@@ -740,21 +742,23 @@ nav {
     font-size: 1.2rem; /* Ajusta o tamanho para ficar mais visível */
   }
 }
+
 /*CONTATO*/
 .contact-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
+  padding: 5px;
   background-color: var(--background-color);
   color: var(--text-color);
 }
 
 .contact-content {
-  max-width: 500px;
+  max-width: 700px;
   width: 100%;
   text-align: center;
+  margin: 0 auto; /* Centraliza o conteúdo */
 }
 
 .contact-content h1 {
@@ -764,7 +768,7 @@ nav {
 }
 
 .contact-content p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 30px;
   color: var(--text-color);
 }
@@ -786,7 +790,7 @@ nav {
 
 .social-links a {
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--text-color);
   transition: color 0.3s ease;
 }
@@ -802,6 +806,7 @@ nav {
 .social-links a.whatsapp:hover {
   color: #25d366; /* Cor do WhatsApp */
 }
+
 input, textarea {
   width: 100%;
   padding: 10px;
@@ -824,6 +829,25 @@ button {
 
 button:hover {
   background: #00ff3c;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 10px;
+  }
+
+  .contact-content {
+    padding: 0 10px; /* Adiciona um pouco de espaço nas laterais */
+  }
+
+  .social-links {
+    flex-wrap: wrap; /* Permite que os ícones sejam empilhados em telas menores */
+  }
+
+  .social-links a {
+    font-size: 1.5rem; /* Reduz o tamanho dos ícones */
+  }
 }
 
 
