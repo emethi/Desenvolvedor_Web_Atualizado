@@ -90,7 +90,7 @@ nav {
 }
 
 .logo img {
-  width: 80px;
+  width: 75px;
 }
 
 .nav-links {
@@ -179,7 +179,7 @@ nav {
 /* Paginação (bolinhas) */
 .carrossel-pagination {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -197,7 +197,7 @@ nav {
 }
 
 .carrossel-pagination span.active {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(255, 255, 255);
 }
 
 /* Responsividade para dispositivos móveis */
@@ -255,20 +255,20 @@ nav {
 
 /* Estilo do título principal */
 .developer-content h1 {
-  font-size: 5rem;
+  font-size: 7rem;
   font-family: 'Fira Code', monospace; /* Fonte escolhida */
-  margin: 0 0 5px 0; /* Reduzi a margem inferior */
-  line-height: 0.5; /* Ajuste para reduzir o espaçamento entre as linhas */
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Efeito de sombra */
+  margin: 0 0 1px 0; /* Reduzi a margem inferior */
+  line-height: 0.2; /* Ajuste para reduzir o espaçamento entre as linhas */
+  text-shadow: 2px 2px 4px rgba(92, 92, 92, 0.5); /* Efeito de sombra */
   color: #d9ae00;
   margin-left: 30px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .developer-content h1 span {
   color: #fb6a22; /* Cor para "Web" */
   font-family: 'Fira Code', monospace; /* Fonte escolhida */
-  font-size: 8rem; /* Tamanho maior para "Web" */
+  font-size: 10rem; /* Tamanho maior para "Web" */
   text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Efeito de sombra */
   margin-left: 30px;
 }
@@ -278,31 +278,13 @@ nav {
   display: flex;
   align-items: center; /* Centraliza verticalmente */
   gap: 50px; /* Espaço entre "Web" e a imagem */
-  margin-top: 10px; /* Espaço acima do container */
+  margin-top: 1px; /* Espaço acima do container */
 }
 
 /* Estilo da imagem superior */
 .developer-image-top img {
   width: 300px; /* Largura fixa para a imagem superior */
   height: auto; /* Altura proporcional */
-}
-
-/* Estilo da imagem inferior (expandida) */
-.developer-image-bottom {
-  width: 100%; /* Ocupa toda a largura do contêiner pai */
-  display: flex;
-  justify-content: center; /* Centraliza a imagem horizontalmente */
-  margin-top: 5px; /* Espaço acima da imagem inferior */
-}
-
-.developer-image-bottom img {
-  width: 100%; /* Expande para ocupar toda a largura do contêiner pai */
-  max-width: 1800px; /* Largura máxima */
-  height: 400px; /* Altura fixa */
-  border-radius: 0px; /* Bordas arredondadas */
-  box-shadow: 0px 0px 40px rgba(0, 212, 255, 0.5); /* Brilho azul */
-  display: block; /* Garante que a imagem se comporte como um bloco */
-  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
 }
 
 /* Responsividade */
@@ -339,9 +321,9 @@ nav {
  display: flex;
  align-items: flex-start; /* Alinha os itens ao topo */
  justify-content: space-between; /* Espaço entre o texto e a assinatura */
- padding: 30px;
+ padding: 1px;
  max-width: 900px; /* Aumentei a largura para acomodar os dois lados */
- margin: 50px auto; /* Adiciona 50px de margem superior e inferior, mantendo a centralização horizontal */
+ margin: 0px auto; /* Adiciona 50px de margem superior e inferior, mantendo a centralização horizontal */
 }
 
 /* Estilo para o texto sobre mim (lado esquerdo) */
@@ -759,128 +741,13 @@ nav {
   }
 }
 
-/* SEÇÃO TABELA DE PREÇOS */
-.pricing-table {
-  background-color: #5c5c5c; /* Fundo escuro */
-  color: rgb(239, 187, 0); /* Texto branco */
-  padding: 50px 20px;
-  text-align: center;
-  margin-left: auto; /* Centralizar horizontalmente com margens */
-  margin-right: auto;
-  width: 85%; /* Ajuste a largura conforme necessário */
-}
-
-/* Estilo para o título da seção Tabela de Preços */
-.section-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #00a3ff;
-  position: relative; /* Para posicionar a linha azul */
-  display: inline-block; /* Faz o h2 ocupar apenas a largura do texto */
-}
-
-/* Adiciona a linha azul abaixo do título "Tabela de Preços" */
-.section-title::after {
-  content: "";
-  display: block;
-  width: 100%; /* Largura da linha (100% da largura do texto) */
-  height: 2px; /* Espessura da linha */
-  background-color: #00a3ff; /* Cor azul */
-  position: absolute;
-  bottom: -5px; /* Distância da linha em relação ao texto */
-  left: 0;
-  border-radius: 2px; /* Leve curvatura nas pontas da linha */
-}
-
-.pricing-table h4 {
-  color: rgb(239, 187, 0);/* Substitua pela cor desejada */
-  font-size: 2rem;
-}
-
-.pricing-table p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  color: #39d93e;
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.pricing-item {
-  background-color: #252222; /* Fundo mais escuro para os itens */
-  border: 2px solid #ffffff; /* Borda verde */
-  padding: 20px;
-  border-radius: 5px;
-  transition: all 0.3s ease-in-out;
-}
-
-.pricing-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilo para o título dos itens de preço */
-.item-title {
-  display: inline-block;
-  color: rgb(227, 171, 0); /* Cor do texto */
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  font-size: 1.2rem; /* Tamanho da fonte */
-  font-weight: bold; /* Negrito */
-}
-
-.pricing-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 5px;
-}
-
-.pricing-item p {
-  font-size: 0.9rem;
-  margin-bottom: 10px;
-}
-
-.pricing-item ul {
-  list-style: none;
-  padding: 0;
-}
-
-.pricing-item li {
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-  position: relative;
-  padding-left: 20px;
-}
-
-.pricing-item li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: #39d93e; /* Verde da logo */
-}
-/* Responsividade */
-@media (max-width: 768px) {
-  .pricing-grid {
-      grid-template-columns: repeat(2, 1fr); /* Na tela menor, duas colunas */
-  }
-}
-@media (max-width: 480px) {
-  .pricing-grid {
-      grid-template-columns: 1fr; /* Na tela muito pequena, uma coluna */
-  }
-}
-
 /* CONTATO */
 .contact-container {
   display: flex; /* Utiliza flexbox para centralizar o conteúdo */
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
   min-height: 100vh; /* Altura mínima de 100% da altura da tela */
-  /*background-color: #ffffff; /* Fundo claro para destacar a moldura */
-  margin: 20px auto; /* Margens acima, abaixo, à esquerda e à direita */
+  margin: 10px auto; /* Margens acima, abaixo, à esquerda e à direita */
 }
 
 /* Moldura de contato */
@@ -891,20 +758,13 @@ nav {
   width: 80%; /* Largura inicial de 80% */
   max-width: 600px; /* Largura máxima de 600px */
   box-shadow: 0px 0px 20px rgba(0, 212, 255, 0.5); /* Mantém o brilho azul */
+  height: 600px;
 }
 
 /* Informações de contato */
 .contact-info {
   text-align: center; /* Centraliza o texto */
   padding: 0.1rem; /* Espaçamento interno de 1rem */
-}
-
-/* Estilos da moldura interna */
-.frame {
-  display: flex; /* Utiliza flexbox */
-  border: 3px solid #ddd; /* Borda de 3px sólida e cinza claro */
-  padding: 5px; /* Espaçamento interno de 10px */
-  margin-bottom: 5px; /* Margem inferior de 10px */
 }
 
 /* Lado esquerdo da moldura */
@@ -934,6 +794,10 @@ nav {
 }
 
 /* Estilos do parágrafo de informações de contato */
+.contact-form h2 {
+  font-size: 1rem; /* Tamanho da fonte */
+  color: #000000;
+}
 .contact-info p {
   font-size: 1.3rem; /* Tamanho da fonte */
   color: #000000;
