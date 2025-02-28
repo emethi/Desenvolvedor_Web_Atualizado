@@ -740,14 +740,16 @@ nav {
     font-size: 1.2rem; /* Ajusta o tamanho para ficar mais visível */
   }
 }
-
 /* CONTATO */
+
+/* Container principal para a seção de contato */
 .contact-container {
   display: flex; /* Utiliza flexbox para centralizar o conteúdo */
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
   min-height: 100vh; /* Altura mínima de 100% da altura da tela */
-  margin: 10px auto; /* Margens acima, abaixo, à esquerda e à direita */
+  background-color: #ffffff; /* Fundo claro para destacar a moldura */
+  margin: 20px auto; /* Margens acima, abaixo, à esquerda e à direita */
 }
 
 /* Moldura de contato */
@@ -756,15 +758,23 @@ nav {
   border: 2px solid #333; /* Borda de 2px sólida */
   padding: 2rem; /* Espaçamento interno de 2rem */
   width: 80%; /* Largura inicial de 80% */
-  max-width: 600px; /* Largura máxima de 600px */
+  max-width: 600px; /* Largura máxima de 800px */
+  /*box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra da moldura */
   box-shadow: 0px 0px 20px rgba(0, 212, 255, 0.5); /* Mantém o brilho azul */
-  height: 600px;
 }
 
 /* Informações de contato */
 .contact-info {
   text-align: center; /* Centraliza o texto */
   padding: 0.1rem; /* Espaçamento interno de 1rem */
+}
+
+/* Estilos da moldura interna */
+.frame {
+  display: flex; /* Utiliza flexbox */
+  border: 3px solid #ddd; /* Borda de 3px sólida e cinza claro */
+  padding: 5px; /* Espaçamento interno de 10px */
+  margin-bottom: 5px; /* Margem inferior de 10px */
 }
 
 /* Lado esquerdo da moldura */
@@ -774,7 +784,6 @@ nav {
 }
 .left-side h1 {
   font-size: 3rem;
-  color:#000000;
 }
 
 /* Lado direito da moldura */
@@ -794,13 +803,8 @@ nav {
 }
 
 /* Estilos do parágrafo de informações de contato */
-.contact-form h2 {
-  font-size: 1rem; /* Tamanho da fonte */
-  color: #000000;
-}
 .contact-info p {
   font-size: 1.3rem; /* Tamanho da fonte */
-  color: #000000;
 }
 
 /* Links das redes sociais */
@@ -900,7 +904,7 @@ textarea {
 
 /* Estilos dos botões */
 button {
-  background-color: #0f0f0f; /* Fundo do botão */
+  background-color: #333; /* Fundo do botão */
   color: white; /* Cor do texto */
   padding: 10px 15px; /* Espaçamento interno */
   border: none; /* Sem borda */
