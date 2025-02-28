@@ -195,49 +195,43 @@
                 </div>
             </div>
         </section>
-
-
-    <section id="contato" class="contact-container">
-        <div class="contact-frame">
-            <section class="contact-info">
-                <div class="frame">
-                    <div class="left-side">
-                        <h1>contato.</h1>
-                        <p>Entre em contato comigo através das redes sociais ou envie um e-mail.</p>
-                        <div class="social-links">
-                            <a href="https://github.com/emethi" class="GitHub"><i class="fab fa-github"></i> GitHub</a>
-                            <a href="https://www.linkedin.com/feed/?trk=sem-ga_campid.12619604099_asid.149519181115_crid.725790844702_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9101559" class="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                            <a href="https://wa.me/5586988165714" class="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        </div>
-                    </div>
+        <section id="contato" class="contact-container">
+            <div class="contact-content">
+                <h1>Contato</h1>
+                <p>Entre em contato comigo através das redes sociais ou envie um e-mail.</p>
+                
+                <div class="social-links">
+                    <a href="https://github.com/emethi" class="github" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/seu-linkedin" class="linkedin" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://wa.me/5586988165714" class="whatsapp" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
-                <div class="right-side">
-                    <img src="img/logclara3d.JPG" alt="Imagem logo da empresa">
-                </div>
-                </div>
-            </section>
-            <section class="contact-form">
-                <h2>Envie um e-mail</h2>
+        
+                <h2>Envie-nos um e-mail</h2> <!-- Adicionando o subtítulo -->
+                
                 <form id="contact-form" action="https://formspree.io/f/mwpvbgoo" method="POST">
-                    <div class="form-row">
-                        <div class="left">
-                            <label for="name">Nome</label>
-                            <input type="text" id="name" name="name" required>
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="right">
-                            <label for="message">Mensagem</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
+                    <div class="form-group">
+                        <label for="name">Nome</label> <!-- Identificação do campo -->
+                        <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
                     </div>
-                    <div class="button-container">
-                        <button type="submit">Enviar e-mail</button>
+                    <div class="form-group">
+                        <label for="email">E-mail</label> <!-- Identificação do campo -->
+                        <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
                     </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label> <!-- Identificação do campo -->
+                        <textarea id="message" name="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
+                    </div>
+                    <button type="submit">Enviar</button> <!-- Botão ajustado -->
                 </form>
-            </section>
-        </div>
-    </section>
+            </div>
+        </section>
+        
 
     <!--RODAPÉ-->
 
