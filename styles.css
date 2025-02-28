@@ -418,6 +418,7 @@ nav {
   .about-text {
     margin-right: 0; /* Remove a margem direita em telas menores */
     margin-bottom: 22px; /* Espaço entre o texto e a assinatura */
+    padding: 0 10px; /* Adiciona um pouco de espaço nas laterais */
   }
 
   .profile-pic {
@@ -427,6 +428,8 @@ nav {
   .signature-container {
     transform: translateY(0); /* Remove o deslocamento vertical */
     margin-bottom: 30px; /* Adiciona margem inferior para evitar sobreposição */
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -755,10 +758,11 @@ nav {
 }
 
 .contact-content {
-  max-width: 700px;
+  max-width: 900px; /* Aumenta o tamanho da seção de contato */
   width: 100%;
   text-align: center;
   margin: 0 auto; /* Centraliza o conteúdo */
+  padding: 20px; /* Adiciona um pouco de espaço interno */
 }
 
 .contact-content h1 {
@@ -838,7 +842,8 @@ button:hover {
   }
 
   .contact-content {
-    padding: 0 10px; /* Adiciona um pouco de espaço nas laterais */
+    max-width: 100%; /* Permite que o conteúdo ocupe toda a largura da tela */
+    padding: 0 15px; /* Adiciona um pouco de espaço nas laterais */
   }
 
   .social-links {
@@ -848,8 +853,11 @@ button:hover {
   .social-links a {
     font-size: 1.5rem; /* Reduz o tamanho dos ícones */
   }
-}
 
+  input, textarea {
+    margin: 5px 0; /* Ajusta o espaçamento entre os campos do formulário */
+  }
+}
 
 /* RODAPÉ */
 footer {
