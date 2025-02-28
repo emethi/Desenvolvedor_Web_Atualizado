@@ -220,7 +220,7 @@ nav {
 
 @media (max-width: 480px) {
   .carrossel-slide img {
-      max-height: 200px; /* Altura ainda menor para telas muito pequenas */
+      max-height: 300px; /* Altura ainda menor para telas muito pequenas */
   }
 
   .carrossel-prev,
