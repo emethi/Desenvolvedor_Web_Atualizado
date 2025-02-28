@@ -329,9 +329,9 @@ nav {
 /* Estilo para o texto sobre mim (lado esquerdo) */
 .about-text {
   color: #00a3ff; /* Azul escuro */
-  max-width: 500px; /* Largura máxima para o texto */
+  max-width: 450px; /* Largura máxima para o texto */
   font-family: 'Fira Code', monospace; 
-  margin-right: 40px; /* Espaço entre o texto e a assinatura */
+  margin-right: 30px; /* Espaço entre o texto e a assinatura */
 }
 
 .about-text h2 {
@@ -381,7 +381,7 @@ nav {
 }
 
 .signature .name {
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Fira Code', monospace;
   font-weight: bold;
   color: #00a3ff; /* Azul mais escuro */
@@ -415,11 +415,11 @@ nav {
 
   .about-text {
     margin-right: 0; /* Remove a margem direita em telas menores */
-    margin-bottom: 25px; /* Espaço entre o texto e a assinatura */
+    margin-bottom: 22px; /* Espaço entre o texto e a assinatura */
   }
 
   .profile-pic {
-    margin: 0 0 20px 0; /* Ajusta o espaçamento da foto */
+    margin: 0 0 15px 0; /* Ajusta o espaçamento da foto */
   }
 
   .signature-container {
@@ -752,7 +752,7 @@ nav {
 }
 
 .contact-content {
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   text-align: center;
 }
@@ -817,7 +817,7 @@ button {
   border: none;
   padding: 10px 15px;
   color: #000000;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -833,7 +833,6 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px;
-  font-family: Arial, sans-serif;
   font-size: 14px;
 }
 
