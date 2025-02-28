@@ -203,7 +203,7 @@ nav {
 /* Responsividade para dispositivos móveis */
 @media (max-width: 768px) {
   .carrossel-slide img {
-      max-height: 300px; /* Altura menor para telas pequenas */
+      max-height: 400px; /* Altura menor para telas pequenas */
   }
 
   .carrossel-prev,
