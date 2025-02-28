@@ -1,0 +1,114 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #add8e6; /* Azul claro */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 320px;
+}
+
+.form-control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold; /* Estilo negrito */
+    margin-right: 10px;
+    white-space: nowrap; /* Mantém o texto em uma única linha */
+}
+
+input[type="number"] {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+    width: 80px; /* Tamanho menor para inputs */
+}
+
+input[type="number"]:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+input[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#multiplication-title {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #444;
+    text-align: center;
+}
+
+#multiplication-table {
+    text-align: center; /* Centraliza os resultados */
+    margin-top: 20px; /* Espaçamento acima */
+}
+
+#multiplication-operations {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    margin: 0 auto; /* Centraliza na tela */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+.operation {
+    font-weight: bold;
+    margin-right: 5px; /* Espaçamento reduzido */
+}
+
+.result {
+    color: #007BFF;
+}

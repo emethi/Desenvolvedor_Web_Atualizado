@@ -1,0 +1,1130 @@
+/* Reset básico e estilos globais */
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  overflow-x: hidden;
+  transition: all 0.3s ease-in-out;
+  color: #000;
+}
+/* Reset básico para remover margens padrão e definir fontes */
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  overflow-x: hidden; /* Evita a barra de rolagem horizontal */
+  transition: all 0.3s ease-in-out; /* Adiciona transição suave para animações */
+  color: #000;
+}
+
+/*TEMA CLARO/ESCURO*/
+/* Estilos globais para o tema claro (padrão) */
+body.light-theme {
+  background-color: #ffffff; /* Fundo branco */
+  color: #000000; /* Texto preto */
+}
+
+body.light-theme footer {
+  background-color: #f9f9f9; /* Fundo do rodapé no tema claro */
+  color: #000; /* Texto do rodapé no tema claro */
+}
+
+/* Estilos globais para o tema escuro */
+body.dark-theme {
+  background-color: #1e1e1e; /* Fundo escuro */
+  color: #ffffff; /* Texto branco */
+}
+
+body.dark-theme footer {
+  background-color: #000; /* Fundo do rodapé no tema escuro */
+  color: #fff; /* Texto do rodapé no tema escuro */
+}
+
+/* Exemplo de estilos para outras seções */
+body.light-theme .header {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+body.dark-theme .header {
+  background-color: #333;
+  color: #fff;
+}
+
+body.light-theme .main-content {
+  background-color: #ffffff;
+  color: #000;
+}
+
+body.dark-theme .main-content {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+/* Estilos do botão de alternar tema */
+.theme-toggle {
+  position: fixed;
+  bottom: 20px; /* Posiciona abaixo do rodapé */
+  right: 20px; /* Alinha no canto direito */
+  background-color: transparent; /* Cor de fundo transparente */
+  color: #fff; /* Cor do ícone */
+  border: none;
+  padding: 7px 7px;
+  border-radius: 50%; /* Botão circular */
+  cursor: pointer;
+  font-size: 1.5rem; /* Tamanho do ícone */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+.theme-toggle:hover {
+  background-color: #005bb5; /* Cor de fundo ao passar o mouse */
+  transform: scale(1.1); /* Efeito de escala ao passar o mouse */
+}
+
+/* CABEÇALHO */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 0px; /* Reduz a margem inferior do cabeçalho */
+}
+
+.logo img {
+  width: 80px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.7px;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #0073e6;
+  padding: 7px 9px;
+  border-radius: 0px;
+  transition: all 0.1s ease-in-out;
+}
+
+.nav-links a:hover {
+  background-color: #6ab5ff;
+  color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 115, 230, 0.3);
+  transform: translateY(-2px);
+  text-decoration: underline; /* Adiciona o sublinhado */
+  text-decoration-color: #00a3ff; /* Cor do sublinhado */
+  text-decoration-thickness: 2px; /* Espessura do sublinhado */
+}
+/*CARROSSEL*/
+.carrossel {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* Container dos slides */
+.carrossel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo de cada slide */
+.carrossel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carrossel-slide img {
+  width: 100%;
+  height: auto; /* Altura automática para manter a proporção */
+  max-height: 600px; /* Altura máxima para telas maiores */
+  object-fit: cover;
+  display: block;
+}
+
+/* Botões de navegação */
+.carrossel-prev,
+.carrossel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 18px; /* Tamanho maior para facilitar o toque */
+}
+
+.carrossel-prev {
+  left: 10px;
+}
+
+.carrossel-next {
+  right: 10px;
+}
+
+/* Paginação (bolinhas) */
+.carrossel-pagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carrossel-pagination span {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carrossel-pagination span.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .carrossel-slide img {
+      max-height: 300px; /* Altura menor para telas pequenas */
+  }
+
+  .carrossel-prev,
+  .carrossel-next {
+      padding: 8px; /* Botões menores */
+      font-size: 16px; /* Tamanho menor para telas pequenas */
+  }
+
+  .carrossel-pagination span {
+      width: 8px; /* Bolinhas menores */
+      height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carrossel-slide img {
+      max-height: 200px; /* Altura ainda menor para telas muito pequenas */
+  }
+
+  .carrossel-prev,
+  .carrossel-next {
+      padding: 6px; /* Botões ainda menores */
+      font-size: 14px; /* Tamanho menor para telas muito pequenas */
+  }
+
+  .carrossel-pagination span {
+      width: 6px; /* Bolinhas ainda menores */
+      height: 6px;
+  }
+}
+
+/* SEÇÃO DESENVOLVEDOR */
+.developer-section {
+  color: #ffffff; /* Texto branco */
+  padding: 20px 10px; /* Padding ajustado */
+}
+
+.developer-container {
+  max-width: 1800px; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza o contêiner */
+  width: 100%; /* Garante que o contêiner ocupe 100% da largura */
+}
+
+.developer-content {
+  display: flex;
+  flex-direction: column; /* Alinha os itens em coluna */
+  align-items: flex-start; /* Alinha à esquerda */
+}
+
+/* Estilo do título principal */
+.developer-content h1 {
+  font-size: 5rem;
+  font-family: 'Fira Code', monospace; /* Fonte escolhida */
+  margin: 0 0 5px 0; /* Reduzi a margem inferior */
+  line-height: 0.5; /* Ajuste para reduzir o espaçamento entre as linhas */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Efeito de sombra */
+  color: #d9ae00;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.developer-content h1 span {
+  color: #fb6a22; /* Cor para "Web" */
+  font-family: 'Fira Code', monospace; /* Fonte escolhida */
+  font-size: 8rem; /* Tamanho maior para "Web" */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Efeito de sombra */
+  margin-left: 30px;
+}
+
+/* Container para "Web" e a imagem superior */
+.web-and-image {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  gap: 50px; /* Espaço entre "Web" e a imagem */
+  margin-top: 10px; /* Espaço acima do container */
+}
+
+/* Estilo da imagem superior */
+.developer-image-top img {
+  width: 300px; /* Largura fixa para a imagem superior */
+  height: auto; /* Altura proporcional */
+}
+
+/* Estilo da imagem inferior (expandida) */
+.developer-image-bottom {
+  width: 100%; /* Ocupa toda a largura do contêiner pai */
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  margin-top: 5px; /* Espaço acima da imagem inferior */
+}
+
+.developer-image-bottom img {
+  width: 100%; /* Expande para ocupar toda a largura do contêiner pai */
+  max-width: 1800px; /* Largura máxima */
+  height: 400px; /* Altura fixa */
+  border-radius: 0px; /* Bordas arredondadas */
+  box-shadow: 0px 0px 40px rgba(0, 212, 255, 0.5); /* Brilho azul */
+  display: block; /* Garante que a imagem se comporte como um bloco */
+  object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .developer-content h1 {
+    font-size: 2rem; /* Reduz o tamanho do título em telas menores */
+    margin-left: 15px; /* Reduz a margem esquerda */
+    margin-top: 15px; /* Reduz a margem superior */
+  }
+
+  .developer-content h1 span {
+    font-size: 2.5rem; /* Reduz o tamanho da palavra "Web" */
+    margin-left: 15px; /* Reduz a margem esquerda */
+  }
+
+  .web-and-image {
+    flex-direction: row; /* Mantém o layout horizontal */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 8px; /* Reduz o espaço entre "Web" e a imagem */
+    margin-top: 5px; /* Reduz o espaço acima do container */
+  }
+
+  .developer-image-top img {
+    width: 110px; /* Reduz o tamanho da imagem superior */
+  }
+
+  .developer-image-bottom img {
+    height: 150px; /* Reduz a altura da imagem inferior */
+  }
+}
+
+/* SEÇÃO SOBRE */
+.about-container {
+ display: flex;
+ align-items: flex-start; /* Alinha os itens ao topo */
+ justify-content: space-between; /* Espaço entre o texto e a assinatura */
+ padding: 30px;
+ max-width: 900px; /* Aumentei a largura para acomodar os dois lados */
+ margin: 50px auto; /* Adiciona 50px de margem superior e inferior, mantendo a centralização horizontal */
+}
+
+/* Estilo para o texto sobre mim (lado esquerdo) */
+.about-text {
+  color: #00a3ff; /* Azul escuro */
+  max-width: 500px; /* Largura máxima para o texto */
+  font-family: 'Fira Code', monospace; 
+  margin-right: 40px; /* Espaço entre o texto e a assinatura */
+}
+
+.about-text h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: 'Fira Code', monospace; 
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #00a3ff; /* Azul mais escuro */
+  text-align: left; /* Alinhamento à esquerda */
+}
+
+.about-text p {
+  font-size: 18px;
+  font-family: 'Fira Code', monospace; 
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.about-text p:first-of-type {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00a3ff;
+}
+
+/* Estilo para o container da foto e assinatura (lado direito) */
+.signature-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza a foto e a assinatura */
+  transform: translateY(90px); /* Move a foto 20px para baixo */
+  margin-bottom: 50px; /* Adiciona margem inferior para evitar sobreposição */
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); /* Forma irregular */
+  border: 2px solid #fff;
+  margin-bottom: 220px; /* Espaço entre a foto e a assinatura */
+}
+
+/* Estilo para a assinatura */
+.signature {
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+}
+
+.signature .name {
+  font-size: 40px;
+  font-family: 'Fira Code', monospace;
+  font-weight: bold;
+  color: #00a3ff; /* Azul mais escuro */
+  display: block;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+/* Adiciona um risco natural abaixo do nome */
+.signature .name::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #00a3ff;
+  margin-top: 5px;
+}
+
+.signature .profession {
+  font-size: 18px;
+  color: #c6b200; /* Azul escuro */
+  font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    margin-right: 0; /* Remove a margem direita em telas menores */
+    margin-bottom: 25px; /* Espaço entre o texto e a assinatura */
+  }
+
+  .profile-pic {
+    margin: 0 0 20px 0; /* Ajusta o espaçamento da foto */
+  }
+
+  .signature-container {
+    transform: translateY(0); /* Remove o deslocamento vertical */
+    margin-bottom: 30px; /* Adiciona margem inferior para evitar sobreposição */
+  }
+}
+
+/* EXTRACURRICULAR */
+.extracurricular-section {
+  background-color: #00b41e; /* Fundo claro */
+  padding: 50px 20px; /* Espaçamento interno */
+}
+
+.extracurricular-container {
+  max-width: 1200px; /* Largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza o container */
+}
+
+.extracurricular-content {
+  display: flex; /* Layout flexível para alinhar texto e imagem */
+  align-items: center; /* Centraliza verticalmente */
+  gap: 40px; /* Espaço entre texto e imagem */
+}
+
+.extracurricular-text {
+  flex: 1; /* Ocupa o espaço disponível */
+}
+
+.extracurricular-image {
+  flex: 1; /* Ocupa o espaço disponível */
+}
+
+.extracurricular-image img {
+  width: 50%; /* Imagem ocupa 100% do container */
+  border-radius: 50%; /* Bordas arredondadas */
+}
+
+.extracurricular-section h2 {
+  font-size: 2.5rem;
+  color: #002060; /* Azul escuro */
+  margin-bottom: 20px;
+}
+
+.extracurricular-section p {
+  font-size: 1.2rem;
+  color: #333; /* Cor do texto */
+  line-height: 1.8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .extracurricular-content {
+    flex-direction: column; /* Empilha texto e imagem em telas menores */
+  }
+
+  .extracurricular-image img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+  }
+}
+
+/* SEÇÃO TRABALHOS */
+  .trabalhos {
+    /*background-color: #ffffff;*/
+    color: #00a3ff;
+    padding: 5px 5px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 50px auto; /* Adiciona 50px de margem superior e inferior, mantendo a centralização horizontal */
+    border-radius: 600px; /* Leve curvatura nas pontas da linha */
+  }
+
+.trabalhos-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.trabalhos-badge {
+  display: inline-block;
+  padding: 10px 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+  position: relative; /* Adicionado para posicionar a linha */
+}
+
+/* Adiciona a linha azul abaixo do texto "Portifólio" */
+.trabalhos-badge::after {
+  content: "";
+  display: block;
+  width: 100%; /* Largura da linha */
+  height: 1px; /* Espessura da linha */
+  background-color: #00a3ff; /* Cor azul */
+  position: absolute;
+  bottom: 5px; /* Distância da linha em relação ao texto */
+  left: 0;
+  border-radius: 2px; /* Leve curvatura nas pontas da linha */
+
+}
+
+/* Estilo do letreiro */
+.marquee {
+  width: 100%; /* Ocupa toda a largura da tela */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassa o container */
+  white-space: nowrap; /* Impede a quebra de linha */
+  /*background-color: #000; /* Fundo preto */
+  color: #ff6112; /* Texto */
+  padding: 10px 0; /* Espaçamento interno */
+  font-size: 2.5rem; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  margin: 30px 0 1px 0; /* Margem superior reduzida para 5px, inferior mantida em 20px */
+}
+
+/* Estilo do texto dentro do letreiro */
+.marquee span {
+  display: inline-block;
+  padding-left: 100%; /* Inicia o texto fora da tela */
+  animation: marquee 50s linear infinite; /* Animação de 20 segundos, infinita */
+}
+
+/* Animação do letreiro */
+@keyframes marquee {
+  0% {
+    transform: translateX(0); /* Começa da posição inicial */
+  }
+  100% {
+    transform: translateX(-100%); /* Move o texto para a esquerda */
+  }
+}
+
+.carousel-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-item {
+  background: #000000;
+  padding: 40px;
+  border-radius: 8px; /* Ajustado */
+  width: 90%;
+  max-width: 350px; /* Limita o tamanho máximo */
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #00d4ff;
+  margin-right: 10px;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-item img {
+  width: 100%;
+  max-width: 300px;
+  height: auto; /* Altura relativa */
+  object-fit: cover;
+  border-radius: 1px; /* Ajustado */
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #fff200;
+}
+
+.project-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color:#00d4ff;
+}
+
+.project-item p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #00d4ff;
+}
+
+/* Estilo para botões */
+.view-project-btn {
+  background-color: #00d4ff;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px; /* Ajustado */
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.view-project-btn:hover {
+  transform: translateY(-3px); /* Ajustado */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel {
+    gap: 15px;
+  }
+
+  .project-item {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .project-item img {
+    max-width: 100%; /* Ajusta a imagem para ocupar toda a largura */
+  }
+}
+
+/* SEÇÃO FAQ */
+.faq {
+  color: rgb(212, 130, 31); /* Texto laranja */
+  font-weight: bold;
+  padding: 60px 20px;
+  text-align: center;
+  margin: 20px auto; /* Centralizar horizontalmente com margens */
+  width: 80%; /* Ajuste a largura conforme necessário */
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-family: 'Fira Code', monospace;
+  position: relative; /* Para posicionar a linha azul */
+  display: inline-block; /* Faz o h2 ocupar apenas o espaço do texto */
+  color: #00a3ff;
+}
+
+.faq h2::after {
+  content: "";
+  display: block;
+  width: 100%; /* Largura da linha (100% da largura do texto) */
+  height: 2px; /* Espessura da linha */
+  background-color: #00a3ff; /* Cor azul */
+  position: absolute;
+  bottom: -10px; /* Distância da linha em relação ao texto */
+  left: 0;
+  border-radius: 2px; /* Leve curvatura nas pontas da linha */
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: transparent; /* Remove o fundo preto do contêiner */
+}
+
+.faq-item {
+  border: 1px solid #01bcc3; /* Borda azul */
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: #1e1e1e; /* Fundo escuro dentro da borda */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+.faq-question {
+  padding: 10px 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(212, 130, 31); /* Texto laranja */
+}
+
+.faq-question::after {
+  content: "+"; /* Símbolo inicial */
+  font-size: 1.5rem; /* Tamanho maior */
+  width: 30px; /* Largura da moldura */
+  height: 30px; /* Altura da moldura */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0073e6; /* Cor de fundo da moldura */
+  color: #fff; /* Cor do símbolo */
+  border-radius: 50%; /* Moldura circular */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  font-family: Arial, sans-serif; /* Define uma fonte padrão para evitar problemas */
+}
+
+.faq-item.active .faq-question::after {
+  content: "\2013"; /* Código Unicode para um traço horizontal (en dash) */
+  font-size: 1.8rem; /* Ajusta o tamanho para ficar mais visível */
+  background-color: #005bb5; /* Cor de fundo ao clicar */
+  color: #029b07; /* Cor verde para o símbolo - */
+  transform: rotate(0deg); /* Remove a rotação */
+}
+
+.faq-answer {
+  padding: 10px 2px;
+  display: none;
+  color: #029b07; /* Texto verde */
+  font-weight: bold;
+  background-color: #1e1e1e; /* Fundo escuro dentro da borda */
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .faq-container {
+    max-width: 100%; /* Garante que o container ocupe toda a largura disponível */
+  }
+
+  .faq-question::after {
+    width: 20px; /* Largura menor para a moldura */
+    height: 20px; /* Altura menor para a moldura */
+    font-size: 1rem; /* Tamanho menor para o símbolo */
+  }
+
+  .faq-item.active .faq-question::after {
+    font-size: 1.2rem; /* Ajusta o tamanho para ficar mais visível */
+  }
+}
+
+/* SEÇÃO TABELA DE PREÇOS */
+.pricing-table {
+  background-color: #5c5c5c; /* Fundo escuro */
+  color: rgb(239, 187, 0); /* Texto branco */
+  padding: 50px 20px;
+  text-align: center;
+  margin-left: auto; /* Centralizar horizontalmente com margens */
+  margin-right: auto;
+  width: 85%; /* Ajuste a largura conforme necessário */
+}
+
+/* Estilo para o título da seção Tabela de Preços */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00a3ff;
+  position: relative; /* Para posicionar a linha azul */
+  display: inline-block; /* Faz o h2 ocupar apenas a largura do texto */
+}
+
+/* Adiciona a linha azul abaixo do título "Tabela de Preços" */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100%; /* Largura da linha (100% da largura do texto) */
+  height: 2px; /* Espessura da linha */
+  background-color: #00a3ff; /* Cor azul */
+  position: absolute;
+  bottom: -5px; /* Distância da linha em relação ao texto */
+  left: 0;
+  border-radius: 2px; /* Leve curvatura nas pontas da linha */
+}
+
+.pricing-table h4 {
+  color: rgb(239, 187, 0);/* Substitua pela cor desejada */
+  font-size: 2rem;
+}
+
+.pricing-table p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: #39d93e;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.pricing-item {
+  background-color: #252222; /* Fundo mais escuro para os itens */
+  border: 2px solid #ffffff; /* Borda verde */
+  padding: 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.pricing-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para o título dos itens de preço */
+.item-title {
+  display: inline-block;
+  color: rgb(227, 171, 0); /* Cor do texto */
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 1.2rem; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+}
+
+.pricing-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.pricing-item p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.pricing-item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-item li {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.pricing-item li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #39d93e; /* Verde da logo */
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .pricing-grid {
+      grid-template-columns: repeat(2, 1fr); /* Na tela menor, duas colunas */
+  }
+}
+@media (max-width: 480px) {
+  .pricing-grid {
+      grid-template-columns: 1fr; /* Na tela muito pequena, uma coluna */
+  }
+}
+
+/* CONTATO */
+.contact-container {
+  display: flex; /* Utiliza flexbox para centralizar o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  min-height: 100vh; /* Altura mínima de 100% da altura da tela */
+  /*background-color: #ffffff; /* Fundo claro para destacar a moldura */
+  margin: 20px auto; /* Margens acima, abaixo, à esquerda e à direita */
+}
+
+/* Moldura de contato */
+.contact-frame {
+  background-color: white; /* Fundo branco para a moldura */
+  border: 2px solid #333; /* Borda de 2px sólida */
+  padding: 2rem; /* Espaçamento interno de 2rem */
+  width: 80%; /* Largura inicial de 80% */
+  max-width: 600px; /* Largura máxima de 600px */
+  box-shadow: 0px 0px 20px rgba(0, 212, 255, 0.5); /* Mantém o brilho azul */
+}
+
+/* Informações de contato */
+.contact-info {
+  text-align: center; /* Centraliza o texto */
+  padding: 0.1rem; /* Espaçamento interno de 1rem */
+}
+
+/* Estilos da moldura interna */
+.frame {
+  display: flex; /* Utiliza flexbox */
+  border: 3px solid #ddd; /* Borda de 3px sólida e cinza claro */
+  padding: 5px; /* Espaçamento interno de 10px */
+  margin-bottom: 5px; /* Margem inferior de 10px */
+}
+
+/* Lado esquerdo da moldura */
+.left-side {
+  flex: 1; /* Flex grow: preenche espaço disponível */
+  padding-right: 5px; /* Espaçamento interno à direita */
+}
+.left-side h1 {
+  font-size: 3rem;
+  color:#000000;
+}
+
+/* Lado direito da moldura */
+.right-side {
+  flex: 1; /* Flex grow: preenche espaço disponível */
+  text-align: center; /* Centraliza o texto */
+  max-width: 120px; /* Define o tamanho máximo da largura */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilos das imagens dentro da .right-side */
+.right-side img {
+  max-width: 100%; /* Faz a imagem ser responsiva */
+  height: auto; /* Mantém a proporção da imagem */
+  width: auto; /* Ajusta a largura automaticamente */
+  border-radius: 50%; /* Faz a imagem ser circular */
+}
+
+/* Estilos do parágrafo de informações de contato */
+.contact-info p {
+  font-size: 1.3rem; /* Tamanho da fonte */
+  color: #000000;
+}
+
+/* Links das redes sociais */
+.social-links a {
+  display: inline-block; /* Bloqueio em linha */
+  margin: 5px; /* Margem ao redor */
+  text-decoration: none; /* Remove a decoração de texto */
+  color: #333; /* Cor do texto */
+  font-size: 1.3rem; /* Tamanho do texto */
+  transition: all 0.1s ease-in-out; /* Transição suave */
+}
+
+/* Cor ao passar o mouse nos links sociais */
+.social-links a:hover {
+  color: #0065cb; /* Cor azul ao passar o mouse */
+}
+
+/* Estilos dos ícones das redes sociais */
+.social-links i {
+  margin-right: 5px; /* Margem à direita */
+  font-size: 2.5rem; /* Tamanho dos ícones */
+}
+
+/* Estilos das imagens com placeholder */
+.image-placeholder img {
+  max-width: 100%; /* Faz a imagem ser responsiva */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 50%; /* Faz a imagem ser circular */
+}
+
+/* Formulário de contato */
+.contact-form {
+  max-width: 550px; /* Largura máxima do formulário */
+  margin: 0 auto; /* Centraliza o formulário */
+  padding: 2rem; /* Espaçamento interno de 2rem */
+  border-top: 1px solid #ddd; /* Borda superior */
+}
+
+/* Título do formulário de contato */
+.contact-form h2 {
+  margin-bottom: 10px; /* Margem inferior */
+  font-size: 2rem; /* Tamanho da fonte */
+}
+
+/* Linhas do formulário */
+.form-row {
+  display: flex; /* Utiliza flexbox */
+  gap: 10px; /* Espaçamento entre os blocos */
+  margin-bottom: 10px; /* Margem inferior */
+}
+
+/* Lado esquerdo do formulário */
+.left {
+  width: 70%; /* Largura */
+  display: flex; /* Utiliza flexbox */
+  flex-direction: column; /* Direção da coluna */
+}
+
+/* Lado direito do formulário */
+.right {
+  width: 80%; /* Largura */
+  display: flex; /* Utiliza flexbox */
+  flex-direction: column; /* Direção da coluna */
+  margin-left: 20px; /* Deslocamento à esquerda */
+}
+
+/* Estilos dos labels */
+label {
+  font-size: 17px; /* Tamanho da fonte */
+  margin-bottom: 5px; /* Margem inferior */
+  color: #050505; /* Cor do texto */
+}
+
+/* Estilos dos inputs e textareas */
+input,
+textarea {
+  width: 100%; /* Largura total */
+  padding: 10px; /* Espaçamento interno */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 4px; /* Bordas arredondadas */
+  font-size: 15px; /* Tamanho da fonte */
+  margin-bottom: 10px; /* Margem inferior */
+}
+
+/* Estilos do textarea */
+textarea {
+  resize: none; /* Desativa redimensionamento */
+  height: 100px; /* Altura */
+}
+
+/* Container dos botões */
+.button-container {
+  display: flex; /* Utiliza flexbox */
+  justify-content: flex-end; /* Alinha à direita */
+  margin-top: 10px; /* Margem superior */
+}
+
+/* Estilos dos botões */
+button {
+  background-color: #0f0f0f; /* Fundo do botão */
+  color: white; /* Cor do texto */
+  padding: 10px 15px; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  border-radius: 4px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de ponteiro */
+  font-size: 20px; /* Tamanho da fonte */
+}
+
+/* Efeito ao passar o mouse no botão */
+button:hover {
+  background-color: #0065cb; /* Fundo azul ao passar o mouse */
+}
+
+/* RODAPÉ */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons img {
+  width: 35px;
+  height: 35px;
+  border-radius: 48%;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo-pe {
+    margin-bottom: 0;
+  }
+}
+
+/* BOTÃO ROLAGEM DE PÁGINA */
+
+#back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent; /* Cor de fundo transparente */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+#back-to-top:hover {
+  background-color: #7d7d7d;
+}
+.arrow-up {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid rgb(211, 91, 0);
+  margin: 0 auto;
+}
