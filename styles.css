@@ -63,7 +63,7 @@ body.dark-theme .main-content {
   position: fixed;
   bottom: 20px; /* Posiciona abaixo do rodapé */
   right: 20px; /* Alinha no canto direito */
-  background-color: transparent; /* Cor de fundo transparente */
+  background-color: transparent !important; /* Cor de fundo transparente */
   color: #fff; /* Cor do ícone */
   border: none;
   padding: 7px 7px;
