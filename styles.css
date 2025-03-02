@@ -843,7 +843,7 @@ button:hover {
 
   .contact-content {
     max-width: 95%; /* Permite que o conteúdo ocupe toda a largura da tela */
-    padding: 0 20px; /* Adiciona um pouco de espaço nas laterais */
+    padding: 0 30px; /* Adiciona um pouco de espaço nas laterais */
   }
 
   .social-links {
