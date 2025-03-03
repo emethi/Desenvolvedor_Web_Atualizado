@@ -1,0 +1,167 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #047bd5, #00c4b4);
+  padding: 20px;
+}
+
+/* Container */
+.container {
+  background-color: #fff;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: height 0.3s ease;
+}
+
+.container.active {
+  height: auto;
+}
+
+/* Header */
+#qr-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#qr-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#qr-header p {
+  color: #333;
+  font-size: 0.9rem;
+}
+
+/* Formulário */
+#qr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+#qr-form select,
+#qr-form input,
+#qr-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+#qr-form select {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+}
+
+#qr-form input {
+  border: 1px solid #777;
+  padding: 12px 15px;
+}
+
+#qr-form button {
+  background-color: #2e7d32;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#qr-form button:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+/* QR Code */
+#qr-code {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#qr-code.active {
+  display: flex;
+  animation: fadeIn 0.5s ease-in;
+}
+
+#qr-code img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Botões de ação */
+#qr-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+#qr-buttons button {
+  padding: 8px 16px;
+  background-color: #616161;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#qr-buttons button:hover {
+  background-color: #2e7d32;
+}
+
+/* Animação */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  #qr-header h1 {
+    font-size: 1.5rem;
+  }
+
+  #qr-form select,
+  #qr-form input,
+  #qr-form button {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  #qr-buttons {
+    flex-direction: column;
+  }
+
+  #qr-buttons button {
+    width: 100%;
+  }
+}

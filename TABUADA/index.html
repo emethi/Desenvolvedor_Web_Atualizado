@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gere tabuadas personalizadas de forma rápida e fácil!">
+  <title>Gerador de Tabuada</title>
+  <!-- Google Fonts: Roboto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Gerador de Tabuada</h1>
+      <p>Insira os valores e gere sua tabuada personalizada!</p>
+    </header>
+    <form id="multiplication-form">
+      <div class="form-group">
+        <label for="number">Tabuada de:</label>
+        <input type="number" id="number" placeholder="Ex: 5" min="1" required aria-label="Número da tabuada">
+      </div>
+      <div class="form-group">
+        <label for="multiplicator">Multiplicar até:</label>
+        <input type="number" id="multiplicator" value="10" min="1" max="50" required aria-label="Limite da tabuada">
+      </div>
+      <button type="submit">Gerar Tabuada</button>
+    </form>
+    <section id="multiplication-table" aria-label="Resultados da tabuada">
+      <h2 id="multiplication-title">Tabuada do número: <span>-</span></h2>
+      <div id="multiplication-operations">
+        <p>Informe um número para calcular a tabuada...</p>
+      </div>
+      <div id="table-buttons">
+        <button id="print-btn">Imprimir</button>
+        <button id="clear-btn">Limpar</button>
+      </div>
+    </section>
+  </main>
+  <script src="script.js" defer></script>
+</body>
+</html>
