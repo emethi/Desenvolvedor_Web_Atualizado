@@ -369,9 +369,8 @@ nav {
 .profile-pic {
   width: 150px;
   height: 150px;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%); /* Forma irregular */
   border: 2px solid #fff;
-  border-radius: 10px; /* Arredonda as bordas */
+  border-radius: 50%; /* Arredonda as bordas */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efeito de sombra suave */
   margin-bottom: 220px; /* Espaço entre a foto e a assinatura */
 }
