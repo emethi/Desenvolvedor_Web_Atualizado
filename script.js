@@ -195,14 +195,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
 document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('header');
-    const carrossel = document.querySelector('.carrossel');
-    const headerHeight = header.offsetHeight;
-    carrossel.style.marginTop = `${headerHeight}px`;
-});     
+  const header = document.querySelector('header');
+  const carrossel = document.querySelector('.carrossel');
 
+  // Ajusta a margem superior do carrossel com base na altura do cabeçalho
+  const headerHeight = header.offsetHeight;
+  carrossel.style.marginTop = `${headerHeight}px`;
 
+  // Adiciona um listener para redimensionamento da tela
+  window.addEventListener('resize', function () {
+    const newHeaderHeight = header.offsetHeight;
+    carrossel.style.marginTop = `${newHeaderHeight}px`;
+  });
+});
       
 
