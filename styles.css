@@ -81,12 +81,68 @@ body.dark-theme .main-content {
 }
 
 /* CABEÇALHO */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Altura fixa (ajuste conforme necessário) */
+  z-index: 1000;
+  background-color: #ececec; /* Adicione uma cor de fundo para visibilidade */
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  margin-bottom: 0px; /* Reduz a margem inferior do cabeçalho */
+  margin-bottom: 0;
+}
+
+.carrossel {
+  margin-top: 100px; /* Mesma altura do cabeçalho */
+}
+
+section {
+  padding-top: 100px; /* Para links âncora */
+}
+
+/* Tema escuro */
+body.dark-theme header {
+  background-color: #333; /* Mantém a consistência do tema */
+}
+
+
+/* Ajustes para telas menores (tablets e dispositivos móveis) */
+@media (max-width: 768px) {
+  header {
+    height: 60px; /* Altura menor para dispositivos móveis */
+  }
+
+  .logo img {
+    width: 60px; /* Reduz o tamanho do logo */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* Reduz o tamanho da fonte dos links */
+    padding: 5px 8px; /* Ajusta o padding dos links */
+  }
+}
+
+/* Ajustes para telas muito pequenas (smartphones pequenos) */
+@media (max-width: 480px) {
+  header {
+    height: 50px; /* Altura ainda menor para smartphones pequenos */
+  }
+
+  .logo img {
+    width: 50px; /* Reduz ainda mais o tamanho do logo */
+  }
+
+  .nav-links a {
+    font-size: 0.8rem; /* Reduz o tamanho da fonte dos links */
+    padding: 4px 6px; /* Ajusta o padding dos links */
+  }
 }
 
 .logo img {
