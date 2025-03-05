@@ -29,7 +29,7 @@ body.light-theme footer {
 
 /* Estilos globais para o tema escuro */
 body.dark-theme {
-  background-color: #1e1e1e; /* Fundo escuro */
+  background-color: #000000; /* Fundo escuro */
   color: #ffffff; /* Texto branco */
 }
 
@@ -88,7 +88,8 @@ header {
   width: 100%;
   height: 100px; /* Altura fixa (ajuste conforme necessário) */
   z-index: 1000;
-  background-color: #ececec; /* Adicione uma cor de fundo para visibilidade */
+  background-color: #f9f9f9;/* Adicione uma cor de fundo para visibilidade */
+  box-shadow: 0 6px 12px rgba(255, 225, 0, 0.533);/* Sombra */
 }
 
 nav {
@@ -109,9 +110,8 @@ section {
 
 /* Tema escuro */
 body.dark-theme header {
-  background-color: #333; /* Mantém a consistência do tema */
+  background-color: #010101; /* Mantém a consistência do tema */
 }
-
 
 .logo img {
   width: 85px;
