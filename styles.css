@@ -120,7 +120,7 @@ body.dark-theme header {
   }
 
   .logo img {
-    width: 60px; /* Reduz o tamanho do logo */
+    width: 85px; /* Reduz o tamanho do logo */
   }
 
   .nav-links a {
@@ -132,11 +132,11 @@ body.dark-theme header {
 /* Ajustes para telas muito pequenas (smartphones pequenos) */
 @media (max-width: 480px) {
   header {
-    height: 50px; /* Altura ainda menor para smartphones pequenos */
+    height: 100px; /* Altura ainda menor para smartphones pequenos */
   }
 
   .logo img {
-    width: 50px; /* Reduz ainda mais o tamanho do logo */
+    width: 70px; /* Reduz ainda mais o tamanho do logo */
   }
 
   .nav-links a {
