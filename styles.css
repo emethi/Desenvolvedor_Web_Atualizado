@@ -90,13 +90,13 @@ nav {
 }
 
 .logo img {
-  width: 75px;
+  width: 85px;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 0.7px;
+  gap: 1px;
   padding: 0;
   margin: 0 auto;
 }
