@@ -196,5 +196,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('header');
+    const carrossel = document.querySelector('.carrossel');
+    const headerHeight = header.offsetHeight;
+    carrossel.style.marginTop = `${headerHeight}px`;
+});     
+
+
       
 
