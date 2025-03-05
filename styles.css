@@ -116,7 +116,7 @@ body.dark-theme header {
 /* Ajustes para telas menores (tablets e dispositivos móveis) */
 @media (max-width: 768px) {
   header {
-    height: 60px; /* Altura menor para dispositivos móveis */
+    height: 100px; /* Altura menor para dispositivos móveis */
   }
 
   .logo img {
