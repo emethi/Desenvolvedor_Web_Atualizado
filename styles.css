@@ -183,8 +183,8 @@ nav {
   
   /* Ajustes para o botão do slide */
   .slide-button {
-      bottom: 30px; /* Move o botão mais para baixo */
-      padding: 10px 30px; /* Diminui o tamanho do botão */
+      bottom: 40px; /* Move o botão mais para baixo */
+      padding: 8px 30px; /* Diminui o tamanho do botão */
       font-size: 0.9rem; /* Reduz o tamanho da fonte */
   }
 }
