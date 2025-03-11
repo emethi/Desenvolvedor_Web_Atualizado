@@ -286,7 +286,7 @@ nav {
    SEÇÃO EXTRACURRICULAR
    ========================================================================== */
 .extracurricular-section {
-    background-color: #00b41e;
+    
     padding: 50px 20px;
 }
 .extracurricular-container {
@@ -308,11 +308,14 @@ nav {
     font-size: 2.5rem;
     color: #002060;
     margin-bottom: 20px;
+    font-weight: bold;
+    
 }
 .extracurricular-section p {
     font-size: 1.2rem;
-    color: #333;
+    color: #00a3ff;
     line-height: 1.8;
+    font-weight: bold;
 }
 
 /* Responsividade da Seção Extracurricular */
